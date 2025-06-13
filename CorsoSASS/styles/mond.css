@@ -1,0 +1,88 @@
+body {
+  color: #00aaff;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+img {
+  border: 8px solid #28a745;
+  padding: 5px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+ul ul {
+  margin-left: 20px;
+}
+
+.box {
+  position: relative;
+}
+.box::before {
+  content: "Prima";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: red;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+.text + .text {
+  margin-top: 20px;
+}
+
+.header-primary {
+  background: linear-gradient(lightblue, blue);
+  height: 100px;
+}
+
+.header-secondary {
+  background: linear-gradient(lightgreen, green);
+  height: 100px;
+}
+
+.background {
+  background-padding: 500px;
+  background-image: url("93c8cf.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-icon {
+  padding-left: 16px;
+  background-image: url(icons/home.png);
+}
+
+.FAQ-icon {
+  padding-left: 16px;
+  background-image: url(icons/FAQ.png);
+}
+
+.colorato-red {
+  background-color: red;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.colorato-blue {
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.colorato-green {
+  background-color: green;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.colorato-yellow {
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+}/*# sourceMappingURL=mond.css.map */

@@ -1,0 +1,90 @@
+// Definizione delle variabili
+$colore-testo: #00aaff; // Azzurro
+$colore-sfondo: #ffffff; // Bianco
+$colore-bordo-immagini: #28a745; // Verde
+
+// Stili generali per il corpo della pagina
+body {
+  color: $colore-testo;
+  background-color: $colore-sfondo;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+// Stili per le immagini
+img {
+  border: 8px solid $colore-bordo-immagini;
+  padding: 5px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  ul {
+    margin-left: 20px;
+  }
+}
+
+.box {
+  position: relative;
+
+  &::before {
+    content: "Prima";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: red;
+  }
+}
+
+
+.text {
+  margin-bottom: 10px;
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+
+
+@mixin gradient($start-color, $end-color) {
+  background: linear-gradient($start-color, $end-color);
+}
+
+.header-primary {
+  @include gradient(lightblue, blue);
+  height: 100px;
+}
+
+.header-secondary {
+  @include gradient(lightgreen, green);
+  height: 100px;
+}
+
+.background {
+  background: {
+   padding: 500px;
+    image: url('93c8cf.jpeg');
+    position: center;
+    repeat: no-repeat;
+  }
+}
+@each $icon in home, FAQ {
+.#{$icon}-icon {
+  padding-left: 16px;
+  background-image: url(icons/#{$icon}.png);
+}
+}
+  
+
+$colors: red, blue, green, yellow;
+
+@each $color in $colors {
+  .colorato-#{$color} {
+    background-color: $color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
